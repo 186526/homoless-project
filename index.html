@@ -5,10 +5,13 @@
         <title>Homoless --或许是最臭的PE工具</title>
         <link rel="stylesheet" href="../css/mdui.min.css">
         <script src="../js/mdui.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>console.log("看你🐎html");console.log("不想更新啊QAQ");var bug = 0;</script>
         <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/186526/jsdelivr/1919810.png">
     </head>
-    <body class="mdui-theme-primary-orange mdui-theme-accent-deep-orange">
+    <!--主代码-->
+    <body class="mdui-theme-primary-orange mdui-theme-accent-deep-orange pjax-container" id="main-body">
+        <!--工具栏-->
         <header class="mdui-appbar ">
             <div class="mdui-toolbar mdui-color-theme mdui-appbar-inset">
                 <span mdui-drawer="{target: '#main-drawer', swipe: true}" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"><i class="mdui-icon material-icons mdui-text-color-white-icon">menu</i></span>
@@ -17,9 +20,15 @@
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons mdui-text-color-white-icon">more_vert</i></a>
             </div>
         </header>
+        <!--抽屉部分-->
         <body class="mdui-drawer-body-left">
+            <script src="../main.js"></script>
             <div class="mdui-drawer mdui-drawer-close"  id="main-drawer" style="padding: 20px">
                 <ul class="mdui-list">
+                    <li class="mdui-list-item mdui-ripple">
+                        <a class="mdui-icon mdui-list-item-icon material-icons" href="javascript:void(0);" onclick="darkmod_use()">brightness_4</a>
+                        <a class="mdui-list-item-content" href="javascript:void(0);" onclick="darkmod_use()">深色模式</a>
+                    </li>
                     <li class="mdui-list-item mdui-ripple">
                         <a href="../dl/" class="material-icons mdui-icon mdui-list-item-icon">file_download</i>
                         <a href="../dl/" class="mdui-list-item-content">点我下载</a>
@@ -31,9 +40,9 @@
                 </ul>
             </div>
         </body>
-        <body class="main">
+        <body>
             <div class="mdui-container">
-                <div class="mdui-card" style="top: 20px;">
+                <div class="mdui-card" style="top: 24px;">
                     <div class="mdui-card-header">
                         <img class="mdui-card-header-avatar" src="https://cdn.jsdelivr.net/gh/186526/jsdelivr/1919810.png">
                         <div class="mdui-card-header-title">野兽先辈</div>
@@ -46,14 +55,16 @@
                         <div class="mdui-card-header-title">Homoless</div>
                         <div class="mdui-card-header-subtitle">或许是最臭的PE工具</div>
                     </div>
-                    <div class="mdui-card-content"></div>
-                    <div class="mdui-card-actions">
-                        <a href="../dl/" class="mdui-btn mdui-btn-raised mdui-text-color-white-text mdui-ripple mdui-color-deep-orange-accent mdui-center"><i href="../dl/" class="mdui-icon material-icons mdui-text-color-white-icon">file_download</i>慢速下载 (悲)</a>
+                    <div class="mdui-card-content">
+
                     </div>
-                <div class="download_bt">
-                    <!--<button href="./dl/" class="mdui-btn mdui-btn-raised mdui-text-color-white-text mdui-ripple mdui-color-deep-orange-accent mdui-center"><i class="mdui-icon material-icons mdui-text-color-white-icon">file_download</i>慢速下载（悲）</button>-->
+                    <div class="mdui-card-actions">
+                        <a href="../dl/" class="mdui-btn mdui-btn-raised mdui-text-color-white-text mdui-ripple mdui-color-deep-orange-accent mdui-hoverable"><i href="../dl/" class="mdui-icon material-icons mdui-text-color-white-icon">file_download</i>慢速下载 (悲)</a>
+                    </div>
                 </div>
             </div>
-            <a class="mdui-fab mdui-ripple mdui-color-deep-orange mdui-fab-fixed" href="../dl/"><i href="../dl/" class="material-icons mdui-icon mdui-text-color-black-icon">file_download</i></a>
         </body>
+        <a class="mdui-fab mdui-ripple mdui-color-deep-orange mdui-fab-fixed" href="../dl/"><i href="../dl/" class="material-icons mdui-icon mdui-text-color-black-icon">file_download</i></a>
+        <script>$(document).pjax('a[target!=_blank]', '#pjax-container', {fragment:'#pjax-container', timeout:8000}); </script>
+    </body>
 </html>
