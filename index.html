@@ -8,6 +8,7 @@
         <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/defunkt/jquery-pjax/jquery.pjax.js"></script>
         <script>console.log("看你🐎html");console.log("不想更新啊QAQ");var bug = 0;</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
         <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/186526/jsdelivr/1919810.png">
     </head>
     <!--主代码-->
@@ -22,7 +23,7 @@
             </div>
         </header>
         <!--抽屉部分-->
-        <body class="mdui-drawer-body-left">
+        <div class="mdui-drawer-body-left">
             <script src="../main.js"></script>
             <div class="mdui-drawer mdui-drawer-close"  id="main-drawer" style="padding: 20px">
                 <ul class="mdui-list">
@@ -40,31 +41,28 @@
                     </li>
                 </ul>
             </div>
-        </body>
-        <body>
-            <div class="mdui-container pjax-body" id="pjax-body">
-                <div class="mdui-card" style="top: 24px;">
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="https://cdn.jsdelivr.net/gh/186526/jsdelivr/1919810.png">
-                        <div class="mdui-card-header-title">野兽先辈</div>
-                        <div class="mdui-card-header-subtitle">--项目的吉祥物</div>
-                    </div>
-                    <div class="mdui-card-media">
-                        <img src="https://cdn.jsdelivr.net/gh/186526/hexo-theme-lx/source/images/post_cover.jpeg">
-                    </div>
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-header-title">Homoless</div>
-                        <div class="mdui-card-header-subtitle">或许是最臭的PE工具</div>
-                    </div>
+        </div>
+        <div class="mdui-container pjax-body" id="pjax-body">
+            <div class="mdui-card" style="margin-top: 5%;">
+                <div class="mdui-card-header">
+                    <img class="mdui-card-header-avatar" src="https://cdn.jsdelivr.net/gh/186526/jsdelivr/1919810.png">
+                    <div class="mdui-card-header-title">野兽先辈</div>
+                    <div class="mdui-card-header-subtitle">--项目的吉祥物</div>
+                </div>
+                <div class="mdui-card-media">
+                    <img src="https://cdn.jsdelivr.net/gh/186526/hexo-theme-lx/source/images/post_cover.jpeg">
+                </div>
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-header-title">Homoless</div>
+                    <div class="mdui-card-header-subtitle">或许是最臭的PE工具</div>
+                </div>
                     <div class="mdui-card-content">
-
-                    </div>
-                    <div class="mdui-card-actions">
-                        <a href="../dl/" class="mdui-btn mdui-btn-raised mdui-text-color-white-text mdui-ripple mdui-color-deep-orange-accent mdui-hoverable"><i href="../dl/" class="mdui-icon material-icons mdui-text-color-white-icon">file_download</i>慢速下载 (悲)</a>
-                    </div>
+                </div>
+                <div class="mdui-card-actions">
+                    <a href="../dl/" class="mdui-btn mdui-btn-raised mdui-text-color-white-text mdui-ripple mdui-color-deep-orange-accent mdui-hoverable"><i href="../dl/" class="mdui-icon material-icons mdui-text-color-white-icon">file_download</i>慢速下载 (悲)</a>
                 </div>
             </div>
-        </body>
+        </div>
         <a class="mdui-fab mdui-ripple mdui-color-deep-orange mdui-fab-fixed" href="../dl/"><i href="../dl/" class="material-icons mdui-icon mdui-text-color-black-icon">file_download</i></a>
     </body>
     <script>$(document).pjax('a', '#pjax-body' , {fragment:'#pjax-body', timeout:8000}); </script>
