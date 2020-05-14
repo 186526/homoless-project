@@ -6,11 +6,12 @@
         <link rel="stylesheet" href="../css/mdui.min.css">
         <script src="../js/mdui.min.js"></script>
         <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/defunkt/jquery-pjax/jquery.pjax.js"></script>
         <script>console.log("看你🐎html");console.log("不想更新啊QAQ");var bug = 0;</script>
         <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/186526/jsdelivr/1919810.png">
     </head>
     <!--主代码-->
-    <body class="mdui-theme-primary-orange mdui-theme-accent-deep-orange pjax-container" id="main-body">
+    <body class="mdui-theme-primary-orange mdui-theme-accent-deep-orange main-body" id="main-body">
         <!--工具栏-->
         <header class="mdui-appbar ">
             <div class="mdui-toolbar mdui-color-theme mdui-appbar-inset">
@@ -65,6 +66,6 @@
             </div>
         </body>
         <a class="mdui-fab mdui-ripple mdui-color-deep-orange mdui-fab-fixed" href="../dl/"><i href="../dl/" class="material-icons mdui-icon mdui-text-color-black-icon">file_download</i></a>
-        <script>$(document).pjax('a[target!=_blank]', '#pjax-container', {fragment:'#pjax-container', timeout:8000}); </script>
+        <script>$(document).pjax('a', '#main-body'); </script>
     </body>
 </html>
