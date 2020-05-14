@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Homoless --或许是最臭的PE工具</title>
-        <link rel="stylesheet" href="../css/mdui.min.css">
-        <script src="../js/mdui.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+        <script src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
         <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/defunkt/jquery-pjax/jquery.pjax.js"></script>
         <script>console.log("看你🐎html");console.log("不想更新啊QAQ");var bug = 0;</script>
@@ -67,5 +67,5 @@
         </body>
         <a class="mdui-fab mdui-ripple mdui-color-deep-orange mdui-fab-fixed" href="../dl/"><i href="../dl/" class="material-icons mdui-icon mdui-text-color-black-icon">file_download</i></a>
     </body>
-    <script>$(document).pjax('a', '#pjax-body'); </script>
+    <script>$(document).pjax('a', '#pjax-body' , {fragment:'#pjax-body', timeout:8000}); </script>
 </html>
